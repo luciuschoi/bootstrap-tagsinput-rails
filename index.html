@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Bootstrap-tagsinput-rails by rorlab</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Bootstrap-tagsinput-rails</h1>
+        <p>To gemify the assets of `bootstrap-tagsinput` jQuery plugin for Rails &gt;= 3.1 </p>
+
+        <p class="view"><a href="https://github.com/rorlab/bootstrap-tagsinput-rails">View the Project on GitHub <small>rorlab/bootstrap-tagsinput-rails</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/rorlab/bootstrap-tagsinput-rails/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/rorlab/bootstrap-tagsinput-rails/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/rorlab/bootstrap-tagsinput-rails">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="bootstraptagsinputrails" class="anchor" href="#bootstraptagsinputrails"><span class="octicon octicon-link"></span></a>Bootstrap::Tagsinput::Rails</h1>
+
+<p>Original Git source - <a href="https://github.com/timschlechter/bootstrap-tagsinput">https://github.com/timschlechter/bootstrap-tagsinput</a></p>
+
+<p>To gemify the assets of <code>bootstrap-tagsinput</code> jQuery plugin for Rails &gt;= 3.1</p>
+
+<h2>
+<a name="compatibility" class="anchor" href="#compatibility"><span class="octicon octicon-link"></span></a>Compatibility</h2>
+
+<p>Designed for Bootstrap 2.3.2 and 3</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'bootstrap-tagsinput-rails'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install bootstrap-tagsinput-rails
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>in app/assets/application.js</p>
+
+<pre><code>//= require bootstrap-tagsinput
+</code></pre>
+
+<p>in app/assets/application.css</p>
+
+<pre><code>*= require bootstrap-tagsinput
+</code></pre>
+
+<p>in form view, you should add <code>data-role='tagsinput'</code> within input tag as the follows: for example, in <code>simple-form</code> view template,</p>
+
+<pre><code>&lt;%= f.input :tag_list, input_html:{data:{role:'tagsinput'}} %&gt;
+</code></pre>
+
+<p>That's it</p>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/rorlab">rorlab</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
