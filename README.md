@@ -36,10 +36,10 @@ in app/assets/application.css
 *= require bootstrap-tagsinput
 ```
 
-in form view, you should add `data-role='tagsinput'` within input tag as the follows:
+in form view, you should add `data-role='tagsinput'` within input tag as the follows: for example, in `simple-form` view template,
 
 ```
-<%= f.input :tag_list, placeholder: '태그를 엔터키로 구분하여 입력하세요.', input_html:{ data:{role:'tagsinput'}} %>
+<%= f.input :tag_list, input_html:{data:{role:'tagsinput'}} %>
 ```
 
 That's it
