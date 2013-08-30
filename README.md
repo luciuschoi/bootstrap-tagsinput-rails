@@ -4,6 +4,8 @@ Original Git source - https://github.com/timschlechter/bootstrap-tagsinput
 
 To gemify the assets of `bootstrap-tagsinput` jQuery plugin for Rails >= 3.1
 
+[![Gem Version](https://badge.fury.io/rb/bootstrap-tagsinput-rails.png)](http://badge.fury.io/rb/bootstrap-tagsinput-rails)
+
 ## Compatibility
 
 Designed for Bootstrap 2.3.2 and 3
