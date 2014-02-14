@@ -44,6 +44,13 @@ in form view, you should add `data-role='tagsinput'` within input tag as the fol
 <%= f.input :tag_list, input_html:{data:{role:'tagsinput'}} %>
 ```
 
+Or if using Rails 4 with Bootstrap, use the following,
+
+```
+<%= f.text_field :tag_list, 'data-role'=>'tagsinput' %>
+
+```
+
 That's it
 
 ## Contributing
