@@ -1,7 +1,7 @@
 module Bootstrap
   module Tagsinput
     module Rails
-      VERSION = "0.3.2.0"
+      VERSION = "0.3.9"
     end
   end
 end
