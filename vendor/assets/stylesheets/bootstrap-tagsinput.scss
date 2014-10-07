@@ -9,11 +9,13 @@
   vertical-align: middle;
   border-radius: 4px;
   max-width: 100%;
-  line-height: 22px; 
+  line-height: 22px;
+  cursor: text;
 
   input {
     border: none;
     box-shadow: none;
+    outline: none;
     background-color: transparent;
     padding: 0;
     margin: 0;
@@ -27,7 +29,7 @@
   }
 
   .tag {
-    margin-right: 5px;
+    margin-right: 2px;
     color: white;
 
     [data-role="remove"] {
