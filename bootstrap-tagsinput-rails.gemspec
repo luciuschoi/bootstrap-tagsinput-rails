@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rorlab@gmail.com"]
   spec.description   = %q{To gemify bootstrap-tagsinput for assets pipleline}
   spec.summary       = %q{Packaging the assets with Bunlder}
-  spec.homepage      = "http://rorlab.github.io/bootstrap-taginput-rails/"
+  spec.homepage      = "http://rorlab.github.io/bootstrap-tagsinput-rails/"
   spec.license       = "MIT"
 
   # spec.files         = `git ls-files`.split($/)

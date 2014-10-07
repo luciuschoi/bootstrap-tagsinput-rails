@@ -48,7 +48,6 @@ Or if using Rails 4 with Bootstrap, use the following,
 
 ```
 <%= f.text_field :tag_list, 'data-role'=>'tagsinput' %>
-
 ```
 
 That's it
