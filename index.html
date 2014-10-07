@@ -78,6 +78,11 @@
 <pre><code>&lt;%= f.input :tag_list, input_html:{data:{role:'tagsinput'}} %&gt;
 </code></pre>
 
+<p>Or if using Rails 4 with Bootstrap, use the following,</p>
+
+<pre><code>&lt;%= f.text_field :tag_list, 'data-role'=&gt;'tagsinput' %&gt;
+</code></pre>
+
 <p>That's it</p>
 
 <h2>
