@@ -3,7 +3,7 @@
 
   var defaultOptions = {
     tagClass: function(item) {
-      return 'label label-info';
+      return 'tag tag-info';
     },
     itemValue: function(item) {
       return item ? item.toString() : item;
@@ -104,7 +104,7 @@
       if (existing && !self.options.allowDuplicates) {
         // Invoke onTagExists
         if (self.options.onTagExists) {
-          var $existingTag = $(".tag", self.$container).filter(function() { return $(this).data("item") === existing; });
+          var $existingTag = $(".bootstrap-tag", self.$container).filter(function() { return $(this).data("item") === existing; });
           self.options.onTagExists(item, $existingTag);
         }
         return;
@@ -124,7 +124,7 @@
       self.itemsArray.push(item);
 
       // add a tag element
-      var $tag = $('<span class="tag ' + htmlEncode(tagClass) + '">' + htmlEncode(itemText) + '<span data-role="remove"></span></span>');
+      var $tag = $('<span class="bootstrap-tag ' + htmlEncode(tagClass) + '">' + htmlEncode(itemText) + '<span data-role="remove"></span></span>');
       $tag.data('item', item);
       self.findInputWrapper().before($tag);
       $tag.after(' ');
@@ -169,7 +169,7 @@
         if (beforeItemRemoveEvent.cancel)
           return;
 
-        $('.tag', self.$container).filter(function() { return $(this).data('item') === item; }).remove();
+        $('.bootstrap-tag', self.$container).filter(function() { return $(this).data('item') === item; }).remove();
         $('option', self.$element).filter(function() { return $(this).data('item') === item; }).remove();
         if($.inArray(item, self.itemsArray) !== -1)
           self.itemsArray.splice($.inArray(item, self.itemsArray), 1);
@@ -191,7 +191,7 @@
     removeAll: function() {
       var self = this;
 
-      $('.tag', self.$container).remove();
+      $('.bootstrap-tag', self.$container).remove();
       $('option', self.$element).remove();
 
       while(self.itemsArray.length > 0)
@@ -206,7 +206,7 @@
      */
     refresh: function() {
       var self = this;
-      $('.tag', self.$container).each(function() {
+      $('.bootstrap-tag', self.$container).each(function() {
         var $tag = $(this),
             item = $tag.data('item'),
             itemValue = self.options.itemValue(item),
@@ -261,7 +261,7 @@
       makeOptionItemFunction(self.options, 'itemValue');
       makeOptionItemFunction(self.options, 'itemText');
       makeOptionFunction(self.options, 'tagClass');
-      
+
       // Typeahead Bootstrap version 2.3.2
       if (self.options.typeahead) {
         var typeahead = self.options.typeahead || {};
@@ -316,7 +316,7 @@
       // typeahead.js
       if (self.options.typeaheadjs) {
           var typeaheadjs = self.options.typeaheadjs || {};
-          
+
           self.$input.typeahead(null, typeaheadjs).on('typeahead:selected', $.proxy(function (obj, datum) {
             if (typeaheadjs.valueKey)
               self.add(datum[typeaheadjs.valueKey]);
@@ -343,7 +343,7 @@
               }
           }, self));
         }
-        
+
 
       self.$container.on('keydown', 'input', $.proxy(function(event) {
         var $input = $(event.target),
@@ -432,7 +432,7 @@
         if (self.$element.attr('disabled')) {
           return;
         }
-        self.remove($(event.target).closest('.tag').data('item'));
+        self.remove($(event.target).closest('.bootstrap-tag').data('item'));
       }, self));
 
       // Only add existing value as tags when using strings as tags
@@ -579,7 +579,7 @@
   }
 
   /**
-    * Returns boolean indicates whether user has pressed an expected key combination. 
+    * Returns boolean indicates whether user has pressed an expected key combination.
     * @param object keyPressEvent: JavaScript event object, refer
     *     http://www.w3.org/TR/2003/WD-DOM-Level-3-Events-20030331/ecma-script-binding.html
     * @param object lookupList: expected key combinations, as in:
@@ -611,7 +611,7 @@
    * Initialize tagsinput behaviour on inputs and selects which have
    * data-role=tagsinput
    */
-  $(function() {
+  $(document).on('turbolinks:load', function() {
     $("input[data-role=tagsinput], select[multiple][data-role=tagsinput]").tagsinput();
   });
 })(window.jQuery);
