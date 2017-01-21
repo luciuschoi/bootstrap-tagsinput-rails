@@ -3,7 +3,7 @@
 
   var defaultOptions = {
     tagClass: function(item) {
-      return 'tag tag-info';
+      return 'badge badge-info';
     },
     itemValue: function(item) {
       return item ? item.toString() : item;
