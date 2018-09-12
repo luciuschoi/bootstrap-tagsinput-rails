@@ -43,7 +43,6 @@
 
     this.$element.after(this.$container);
 
-    this.$input.get(0).style.cssText = "width: 100% !important;";
     this.build(options);
   }
 
