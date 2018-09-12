@@ -611,6 +611,9 @@
    * data-role=tagsinput
    */
   $(function() {
-    $("input[data-role=tagsinput], select[multiple][data-role=tagsinput]").tagsinput();
+    $("input[data-role=tagsinput], select[multiple][data-role=tagsinput]").tagsinput({
+      confirmKeys: [13, 32, 188], //Enter, Space and Comma
+      maxTags: 5      
+    });
   });
 })(window.jQuery);
